@@ -38,6 +38,16 @@ botao.classList.remove("botao-ativo")
             botao.classList.add("botao-ativo")
         }
     })
-    porcentagem = parseFloat(evento.target.value) / 100
-    console.log(porcentagem)
+
+
+    if(evento.target.value !== "") {
+        porcentagem = parseFloat(evento.target.value) / 100
+    } else {
+
+
+        console.log(porcentagem)
+    }
 }
+
+const gorjetaInput = document.querySelector("#outra")
+gorjetaInput.addEventListener("input", receberPOrcentagemBotao)
