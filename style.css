@@ -188,7 +188,7 @@ main {
 
 .conta input::-webkit-inner-spin-button,
 .pessoas input::-webkit-inner-spin-button,
-.gorjeta #outra ::-webkit-inner-spin-button {
+.informacoes #outra::-webkit-inner-spin-button {
     display: none;
 }
 
