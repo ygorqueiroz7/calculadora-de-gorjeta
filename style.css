@@ -1,8 +1,8 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "space mono", serif ;
+    font-family: "Space Mono", serif;
 }
 
 :root {
@@ -14,10 +14,10 @@
     --green-600: #547878;
     --green-700: #3d6666;
     --green-800: #00474b;
-    --ligth-green: #26c2ae;
+    --light-green: #26c2ae;
     --white: #ffffff;
-    --green-houver:#9fe8df;
-    --danger:#e17457;
+    --green-hover: #9fe8df;
+    --danger: #e17457;
 }
 
 body {
@@ -27,18 +27,18 @@ body {
 header {
     display: flex;
     justify-content: center;
-    padding-block: 2.8rem;
+    padding: 2.8rem 0;
 }
 
 main {
-    background-color: #ffffff;
+    background-color: var(--white);
     padding: 2rem;
-    border-radius:  1.5625rem 1.5625rem 0 0;
+    border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
 .conta,
 .gorjeta,
-.pessoas  {
+.pessoas {
     margin-bottom: 2rem;
 }
 
@@ -50,7 +50,7 @@ main {
 }
 
 .conta div,
-.pessoas  .input-box {
+.pessoas .input-box {
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -71,7 +71,7 @@ main {
     outline: none;
 }
 
-.conta input::placeholder
+.conta input::placeholder,
 .pessoas input::placeholder {
     color: var(--green-300);
 }
@@ -82,18 +82,16 @@ main {
 .pessoas:has(input:hover) .input-box,
 .gorjeta #outra:focus,
 .gorjeta #outra:hover {
-    outline: 2px solid var(--ligth-green);
+    outline: 2px solid var(--light-green);
     cursor: pointer;
 }
 
 .gorjeta div {
     margin-top: 1rem;
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-
 
 .gorjeta input {
     font-size: 1.5rem;
@@ -101,20 +99,20 @@ main {
     border: none;
     text-align: center;
     outline: none;
-    padding-block: 0.4rem;
+    padding: 0.4rem;
     border-radius: 0.3125rem;
     background-color: var(--green-800);
     color: var(--white);
 }
 
 .gorjeta .botao-ativo {
-    background-color: var(--ligth-green);
+    background-color: var(--light-green);
     color: var(--green-800);
 }
 
-.gorjeta input [type="button"]:hover,
+.gorjeta input[type="button"]:hover,
 .resultados button:hover {
-    background-color: var(--green-houver);
+    background-color: var(--green-hover);
     cursor: pointer;
 }
 
@@ -163,7 +161,7 @@ main {
 }
 
 .resultados div > strong {
-    color: var(--ligth-green);
+    color: var(--light-green);
     font-size: 2rem;
 }
 
@@ -176,7 +174,8 @@ main {
 }
 
 .resultados button {
-    width: var(--ligth-green);
+    width: 100%;
+    background-color: var(--light-green);
     border: none;
     border-radius: 0.3125rem;
     color: var(--green-800);
@@ -192,7 +191,7 @@ main {
     display: none;
 }
 
-@media(min-width: 920px) {
+@media (min-width: 920px) {
     body {
         display: flex;
         flex-direction: column;
@@ -205,37 +204,26 @@ main {
         padding: 0;
     }
 
-
     main {
         display: flex;
         gap: 3rem;
         padding: 3rem;
         border-radius: 1.5625rem;
-        max-width: 57.5rem;
-        margin-inline: auto;
-    }
-
-    main section {
-        width: 100%;
-    }
+        max-width: 57.5rem; margin-inline: auto; }main section {
+    width: 100%;
 }
 
-
-
-.gorjeta div {
-    grid-template-columns: 1fr 1fr 1fr;
+}.gorjeta div {
+    grid-template-columns: repeat(3, 1fr);
 }
-
 
 .resultados {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 2.5rem;
 }
 
 .resultados div > strong {
     font-size: 3rem;
 }
-

@@ -19,57 +19,51 @@
         <section class="informacoes">
             <form action="">
                 <div class="conta">
-                    <label for="conta"></label>
+                    <label for="conta">Conta:</label>
                     <div>
-                        <img src="images/./icon-dollar.svg" alt="ícone do cifrão">
-                        <input type="number" name="conta" id="conta" placeholder= "0">
+                        <img src="./images/icon-dollar.svg" alt="ícone do cifrão">
+                        <input type="number" name="conta" id="conta" placeholder="0">
                     </div>
                 </div>
 
                 <div class="gorjeta">
-                    <label for="outra">selecione a gorjeta %</label>
+                    <label for="outra">Selecione a gorjeta %:</label>
                     <div>
                         <input type="button" value="5%">
                         <input type="button" value="10%">
                         <input type="button" value="15%">
                         <input type="button" value="25%">
                         <input type="button" value="50%">
-                        <input type="number" name="outra" id="outra" placeholder= "outra">
+                        <input type="number" name="outra" id="outra" placeholder="Outra">
                     </div>
                 </div>
                 <div class="pessoas">
-                 <div class="textos">
-                    <label for="pessoas">quantidade de pessoas</label>
-                    <p id="erro">não pode ser zero</p>
-                 </div>
+                    <div class="textos">
+                        <label for="pessoas">Quantidade de pessoas</label>
+                        <p id="erro" class="erro">Não pode ser zero</p>
+                    </div>
                     <div class="input-box">
                         <img src="./images/icon-person.svg" alt="ícone da pessoa">
-                        <input type="number" name="pessoas" id="pessoas">
+                        <input type="number" name="pessoas" id="pessoas" placeholder="0">
                     </div>
                 </div>
             </form>
         </section>
 
         <section class="resultados">
-          <div>
             <div class="gorjeta-total">
                 <p>
-                    <strong>gorjeta</strong> <br>
-                    / pessoa
+                    <strong>Gorjeta/pessoa</strong>
                 </p>
-
                 <strong>R$ 0.00</strong>
-                <div class="total">
-                    <p>
-                        <strong>total</strong> <br>
-                        / pessoa
-                    </p>
-                    
-                    <strong>R$ 0.00</strong>
-                </div>
-          </div>
-                <button>LIMPAR</button>
             </div>
+            <div class="total">
+                <p>
+                    <strong>Total/pessoa</strong>
+                </p>
+                <strong>R$ 0.00</strong>
+            </div>
+            <button class="limpar-botao">Limpar</button>
         </section>
     </main>
 </body>
